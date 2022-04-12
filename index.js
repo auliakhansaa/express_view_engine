@@ -9,6 +9,14 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/salam", (req, res) => {
+  const namaDariQuery = req.query.nama || "Tidak ada nama";
+
+  res.render("salam", {
+    nama: namaDariQuery,
+  });
+});
+
 app.listen(port, () => {
   console.log(`Listening on http://localhost:${port}`);
 });
