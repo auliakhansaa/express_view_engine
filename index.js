@@ -38,7 +38,7 @@ app.post("/register", (req, res) => {
 
   console.log(users);
 
-  res.redirect("/register");
+  res.redirect("/tampilkan-user");
 });
 
 app.get("/jumlah-user", (req, res) => {
@@ -47,6 +47,12 @@ app.get("/jumlah-user", (req, res) => {
 
 app.get("/tampilkan-user-json", (req, res) => {
   res.json(users);
+});
+
+app.get("/tampilkan-user", (req, res) => {
+  res.render("users", {
+    users,
+  });
 });
 
 app.listen(port, () => {
