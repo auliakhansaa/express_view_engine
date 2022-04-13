@@ -1,7 +1,7 @@
 const express = require("express");
 
 const app = express();
-const port = 3000;
+const port = 8080;
 
 // Anggap saja sebuah database
 const users = [];
@@ -28,8 +28,8 @@ app.get("/register", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-  const email = req.body.email;
-  const password = req.body.password;
+  const judulDrama = req.body.judulDrama;
+  const genre = req.body.password;
 
   users.push({
     email: email,
