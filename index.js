@@ -29,11 +29,19 @@ app.get("/register", (req, res) => {
 
 app.post("/register", (req, res) => {
   const judulDrama = req.body.judulDrama;
-  const genre = req.body.password;
+  const genre = req.body.genre;
+  const rated = req.body.rated;
+  const episode = req.body.episode;
+  const mainCast1 = req.body.mainCast1;
+  const mainCast2 = req.body.mainCast2;
 
   users.push({
-    email: email,
-    password: password,
+    judulDrama: judulDrama,
+    genre: genre,
+    rated:rated,
+    episode: episode,
+    mainCast1:mainCast1,
+    mainCast2:mainCast2
   });
 
   console.log(users);

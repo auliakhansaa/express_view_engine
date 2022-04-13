@@ -12,16 +12,24 @@
     <table border="1">
       <thead>
         <tr>
-          <th>Email</th>
-          <th>Password</th>
+          <th>Judul</th>
+          <th>Genre</th>
+          <th>Rated</th>
+          <th>Jumlah Episode</th>
+          <th>Main Cast 1</th>
+          <th>Main Cast 2</th>
         </tr>
       </thead>
 
       <tbody>
         <% users.forEach((user) => { %>
             <tr>
-            <td><%= user.email %></td>
-            <td><%= user.password %></td>
+            <td><%= user.judulDrama %></td>
+            <td><%= user.genre %></td>
+            <td><%= user.rated %></td>
+            <td><%= user.episode %></td>
+            <td><%= user.mainCast1 %></td>
+            <td><%= user.mainCast2 %></td>
             </tr>
         <% }) %> 
         </tbody>
